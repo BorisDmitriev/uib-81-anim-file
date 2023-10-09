@@ -1,0 +1,155 @@
+.page {
+    background-color: #fde1de;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.processing-container {
+    width: 45%;
+    height: 50%;
+    position: relative;
+
+    /* border: 2px solid red; */
+}
+
+
+.processing-item {
+    position: absolute;
+
+    left: 45%;
+    top: 45%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+.i-1,
+.i-2 {
+    animation-name: animated;
+}
+
+.i-2 {
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+}
+
+.i-3 {
+    animation-name: animated-2;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+.processing-label-1 {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    left: 24rem;
+    top: 21rem;
+
+    animation-name: process;
+    animation-duration: 1s;
+    animation-iteration-count: 4;
+}
+
+.processing-label-2 {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    left: 25.5rem;
+    top: 21rem;
+
+    animation-name: process-2;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes animated {
+
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+        left: 53%;
+        top: 40%;
+    }
+
+    20% {
+        left: 45%;
+    }
+
+    60%,
+    70% {
+        top: 45%;
+    }
+
+    95%,
+    100% {
+        transform: scale(.8);
+    }
+}
+
+@keyframes animated-2 {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+        top: 30%;
+    }
+
+    20% {
+        top: 50%;
+    }
+
+    40% {
+        top: 45%;
+    }
+
+    50% {
+        top: 52%
+    }
+
+    95%,
+    100% {
+        opacity: 1;
+        visibility: visible;
+        top: 45%
+    }
+}
+
+@keyframes process {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes process-2 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
